@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-size: 62.5%;
+    width: 100%;
+    overflow-x: hidden; /* Previene el scroll horizontal */
+}
+
+/* Header */
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--BlueP);
+}
+
+.title img {
+    width: 100%; /* Imagen se ajusta al ancho del contenedor */
+    max-width: 60rem; /* Tamaño máximo */
+    height: auto; /* Mantiene proporciones */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--BlueP);
+}
+
+/* Navegación */
+.ban_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: var(--BlueP);
+}
+
+.ban_nav p {
+    font-weight: 700;
+    font-size: 1.8rem;
+    font-family: "Funnel Display", serif;
+    color: white;
+    margin: 0;
+}
+
+.ban_nav p:hover {
+    color: var(--Prinpipal-Color);
+    box-shadow: 0 0.8rem 0.8rem var(--Prinpipal-Color);
+    border-radius: 0.5rem;
+}
+
+.ban_nav input {
+    width: 40rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem; /* Ajuste interno */
+}
+
+/* Imágenes principales */
+.pictures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: var(--BlackP);
+    padding: 2rem; /* Espaciado interno */
+}
+
+.pictures img {
+    max-width: 30rem;
+    height: 30rem;
+    border-radius: 3rem;
+    margin-top: 2rem;
+}
+
+.pictures img:hover {
+    box-shadow: 0 0.2rem 0.4rem rgb(176, 164, 164);
+    transform: scale(1.05);
+}
+
+/* Variables */
+:root {
+    --Prinpipal-Color: #87cd04;
+    --BlackP: #13161d;
+    --BlueP: #141c3a;
+    --Black2: #18141c;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .title img {
+        max-width: 100%; /* Asegura que no desborde */
+    }
+    .ban_nav input {
+        width: 90%; /* Se adapta al ancho disponible */
+    }
+    .pictures img {
+        max-width: 90%; /* Imagen más pequeña en móviles */
+    }
+}
+
+.pictures h3{
+    color: white;
+    font-family: "Funnel Display", serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.pictures h3:hover{
+    color: var(--Prinpipal-Color);
+    font-size: 2.5rem;
+    box-shadow: 0 0.8rem 0.8rem #87cd04;
+    border-radius: 0.5rem;
+}
+
+footer {
+    background-color: var(--Prinpipal-Color);
+    color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 120rem;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 20rem;
+}
+
+.footer-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--BlueP);
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
